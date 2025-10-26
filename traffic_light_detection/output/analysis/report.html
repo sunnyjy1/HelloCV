@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>交通信号灯检测报告</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .header { background: #2c3e50; color: white; padding: 20px; border-radius: 10px; }
+        .section { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+        .stat-box { background: #ecf0f1; padding: 15px; border-radius: 5px; text-align: center; }
+        .color-red { color: #e74c3c; }
+        .color-yellow { color: #f39c12; }
+        .color-green { color: #2ecc71; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚦 交通信号灯检测报告</h1>
+        <p>基于OpenCV和C++的计算机视觉项目</p>
+    </div>
+
+    <div class="section">
+        <h2>📊 项目概览</h2>
+        <div class="stats">
+            <div class="stat-box">
+                <h3>总帧数</h3>
+                <p>450</p>
+            </div>
+            <div class="stat-box">
+                <h3>检测率</h3>
+                <p>61.1%</p>
+            </div>
+            <div class="stat-box">
+                <h3>处理时间</h3>
+                <p>52.3秒</p>
+            </div>
+            <div class="stat-box">
+                <h3>处理速度</h3>
+                <p>8.6 FPS</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎨 颜色检测统计</h2>
+        <div class="stats">
+            <div class="stat-box color-red">
+                <h3>红色信号</h3>
+                <p>92帧 (20.4%)</p>
+            </div>
+            <div class="stat-box color-yellow">
+                <h3>黄色信号</h3>
+                <p>91帧 (20.2%)</p>
+            </div>
+            <div class="stat-box color-green">
+                <h3>绿色信号</h3>
+                <p>92帧 (20.4%)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🛠️ 技术实现</h2>
+        <ul>
+            <li><strong>颜色空间:</strong> HSV颜色空间转换</li>
+            <li><strong>噪声处理:</strong> 形态学开闭运算</li>
+            <li><strong>目标检测:</strong> 轮廓分析和几何特征筛选</li>
+            <li><strong>输出生成:</strong> 实时标注和视频写入</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📁 输出文件</h2>
+        <ul>
+            <li>result.avi - 处理后的视频文件</li>
+            <li>detection_results/ - 检测结果关键帧</li>
+            <li>detection_log.csv - 详细处理日志</li>
+            <li>detection_report.txt - 本报告文本版</li>
+        </ul>
+    </div>
+</body>
+</html>
